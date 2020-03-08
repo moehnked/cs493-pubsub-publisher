@@ -15,7 +15,7 @@ app.post('/play', (req, res) => {
   AWS.config.update({region: 'us-east-1'});
   
   const sqs = new AWS.SQS({apiVersion: '2012-11-05'});
-  const queueUrl = "https://sqs.us-east-1.amazonaws.com/850459610895/test-queue.fifo";
+  const queueUrl = "https://sqs.us-east-1.amazonaws.com/850459610895/reporting.fifo";
   var bod = JSON.parse(req.body);
   var artist = bod['artist'];
   var album = bod['album'];
